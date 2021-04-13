@@ -1,17 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App - testing build through netlify - test 4"/>
+    
+    <TestComp :name="name" :surName="surName"/>
+    <TestComp name="Craig" surName="Hctor"/>
+    <AddTodo/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import AddTodo from './components/AddTodo.vue'
+import TestComp from './components/TestComp.vue'
 
 export default {
   name: 'App',
+  data() {
+    return {
+      name: "Margo",
+      surName: "Robbie"
+    }
+  },
   components: {
-    HelloWorld
+    TestComp,
+    AddTodo
   }
 }
 </script>
